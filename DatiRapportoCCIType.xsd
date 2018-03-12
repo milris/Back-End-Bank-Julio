@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema elementFormDefault="qualified"
+	targetNamespace="http://www.bnpp.com/jdf/service/nk/datirapportocc/input"
+	version="1.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:jdf="http://www.bnpp.com/jdf"
+	xmlns:rappccin="http://www.bnpp.com/jdf/service/nk/datirapportocc/input"
+	xmlns:sin="http://www.bnpp.com/jdf/service/nk/serviceinput" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<author>Engineering Ingegneria Informatica S.p.A.</author>
+			<creation-date>02/08/2017</creation-date>
+			<last-revision-date>30/10/2017</last-revision-date>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.bnpp.com/jdf/service/nk/serviceinput" />
+	<xsd:element name="input-data"
+		type="rappccin:JdfInputDataFornkDatiRapportoCC" />
+	<xsd:element name="DatiRapportoCCIType" type="rappccin:DatiRapportoCCIType" />
+	<xsd:complexType name="JdfInputDataFornkDatiRapportoCC">
+		<xsd:sequence>
+			<xsd:element ref="rappccin:DatiRapportoCCIType" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="DatiRapportoCCIType">
+		<xsd:sequence>
+			<xsd:element name="serviceInput" type="xsd:string" />
+			<xsd:element name="nkSportello" type="xsd:string" />
+			<xsd:element name="nkConto" type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType> 
+	</xsd:schema>
